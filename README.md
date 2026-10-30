@@ -1,19 +1,18 @@
-<h1 align="center">Realtime Spotify Application ✨</h1>
+<h1 align="center">Spotify Clone</h1>
 
-![Demo App](/frontend/public/screenshot-for-readme.png)
 
-About This Course:
 
-- 🎸 Listen to music, play next and previous songs
-- 🔈 Update the volume with a slider
-- 🎧 Admin dashboard to create albums and songs
-- 💬 Real-time Chat App integrated into Spotify
-- 👨🏼‍💼 Online/Offline status
-- 👀 See what other users are listening to in real-time
-- 📊 Aggregate data for the analytics page
-- 🚀 And a lot more...
+Sobre este curso:
+- Escucha música, reproduce la siguiente canción y vuelve a la anterior.
+- Ajusta el volumen mediante un control deslizante.
+- Panel de administración para crear álbumes y canciones.
+- Aplicación de chat en tiempo real integrada en Spotify.
+- Estado de conexión: en línea / desconectado.
+- Mira qué están escuchando otros usuarios en tiempo real.
+- Recopilación y procesamiento de datos para la página de estadísticas.
+- ¡Y mucho más!
 
-### Setup .env file in _backend_ folder
+### Configuración del archivo .env en la carpeta backend
 
 ```bash
 PORT=...
@@ -30,7 +29,7 @@ CLERK_PUBLISHABLE_KEY=...
 CLERK_SECRET_KEY=...
 ```
 
-### Setup .env file in _frontend_ folder
+### Configuración del archivo .env en la carpeta frontend
 
 ```bash
 VITE_CLERK_PUBLISHABLE_KEY=...

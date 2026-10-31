@@ -58,6 +58,29 @@ export const getMadeForYouSongs = async (req, res, next) => {
 	}
 };
 
+export const searchSongs = async (req, res, next) => {
+	try {
+		const { q } = req.query;
+		if (!q || !q.trim()) {
+			return res.json([]);
+		}
+
+		const escapedQuery = q.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		const regex = new RegExp(escapedQuery, "i");
+
+		const songs = await Song.find({
+			$or: [{ title: regex }, { artist: regex }],
+		})
+			.sort({ createdAt: -1 })
+			.limit(20)
+			.select("title artist imageUrl audioUrl albumId duration");
+
+		res.json(songs);
+	} catch (error) {
+		next(error);
+	}
+};
+
 export const getTrendingSongs = async (req, res, next) => {
 	try {
 		const songs = await Song.aggregate([
